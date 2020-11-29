@@ -1,0 +1,19 @@
+﻿@model StartTheExamModel
+@{
+    ViewData["Title"] = "StartTheExam";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form class="w-50 mx-auto shadow p-4 mt-5" asp-action="StartTheExam" method="post">
+
+    <div class="form-group">
+        <label>Başlık</label>
+        <span class="text-danger"></span>
+        @*<select class="form-control" id="title" asp-for="@ExamApp.Models.ExamQuestionModel" asp-items="@ViewBag.TitleList">*@
+        <option hidden value="-1">Seçiniz</option>
+        @*</select>*@
+    </div>
+
+    <button type="submit" class="btn btn-info btn-sm">Tamamla</button>
+
+</form>
